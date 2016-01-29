@@ -1,0 +1,204 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+body,
+html {
+    width: 280px;
+    height: 440px;
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat-Bold;
+}
+
+header {
+    position: fixed;
+    width: 280px;
+    height: 40px;
+    border-bottom: 1px solid #d9d9d9;
+    background: #fff;
+}
+
+header h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+    margin: 0;
+}
+
+.login {
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background-color: #3498db;
+    position: relative;
+}
+
+.login-btn {
+    cursor: pointer;
+    font-size: 2em;
+    color: #ffffff;
+    background-color: #2ECC71;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 10%;
+    width: 50%;
+    margin: -15% 0 0 -25%;
+    padding-top: 10px;
+}
+
+#parent{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#list{
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-right: 15px; /* Increase this value for cross-browser compatibility */
+}
+
+footer {
+    text-align: center;
+}
+
+footer a {
+    display: block;
+    height: 30px;
+    margin-bottom: 8px;
+    color: #d9d9d9;
+    font-size: 12px;
+    line-height: 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+#friends-list {
+    padding-top: 40px;
+}
+
+.friend-row {
+    font-size: 2em;
+    width: 100%;
+    height: 89px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #3498db;
+    border-bottom:2px solid #2ECC71;
+}
+
+footer a:active,
+footer a:hover,
+footer a:visited {
+    color: #d9d9d9;
+}
+
+footer:hover a {
+    color: #069;
+}
+
+#nav-list {
+    height: 24px;
+    border-top: 1px solid #d9d9d9;
+    padding: 1px 0 0;
+}
+
+#nav-list .nav-button {
+    float: left;
+    width: 40px;
+    border-radius: 2px;
+    color: #464646;
+    cursor: pointer;
+}
+
+#nav-list .tab-button {
+    width: 50%;
+    border-radius: 2px;
+    color: #464646;
+    text-align: center;
+    float: right;
+    padding-top: 10px;
+    cursor: pointer;
+}
+    
+#nav-list .nav-button:active {
+    background: #dcdcdc;
+}
+
+#nav-list .nav-button.is-selected {
+    background: #5c5b5c;
+    color: #fff;
+}
+
+#nav-list .nav-button .fa {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+#nav-list .nav-button .fa .fa-clock,
+#nav-list .nav-button .fa .fa-cog {
+    display: none;
+}
+
+#settings,
+.view {
+    display: none;
+    width: 280px;
+    height: 370px;
+    padding-top: 55px;
+    overflow: auto;
+}
+
+#settings::-webkit-scrollbar,
+.view::-webkit-scrollbar {
+    width: 0!important;
+}
+
+#settings.is-visible,
+.view.is-visible {
+    display: inline-block;
+}
+
+.emoji {
+    float: left;
+    cursor: pointer;
+    margin: 0 4px 8px;
+}
+
+.emoji img {
+    float: left;
+    height: 24px;
+}
+
+.emoji .emoji-name {
+    display: none;
+    height: 24px;
+    font-family: "Courier New", Courier, monospace;
+    line-height: 24px;
+    letter-spacing: -1px;
+}
+
+#nav-list:after,
+#nav-list:before,
+#settings:after,
+#settings:before,
+.view:after,
+.view:before {
+    content: "";
+    display: table;
+}
+
+#nav-list:after,
+#settings:after,
+.view:after {
+    clear: both;
+}

@@ -1,0 +1,45 @@
+{
+    "name": "Yo Status",
+    "version": "1.0.3",
+    "manifest_version": 2,
+    "description": "Chrome Extension for Yo Status - Single emoji status",
+    "icons": {
+        "16": "images/icon-16.png",
+        "128": "images/icon-128.png"
+    },
+    "default_locale": "en",
+    "background": {
+        "scripts": [
+            "scripts/external/websockets.js",
+            "scripts/external/jquery-2.2.0.min.js",
+            "popup.js"
+        ]
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon-19.png",
+            "38": "images/icon-38.png"
+        },
+        "default_title": "Yo Status",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*","https://*/*"],
+        "js": [
+          "scripts/external/websockets.js",
+          "scripts/external/jquery-2.2.0.min.js",
+          "emoji/js/jquery.emojis.js",
+          "emoji/js/jquery.emojipicker.js"
+        ]
+      }],
+    "permissions": [
+        "identity",
+        "activeTab",
+        "cookies",
+        "tabs",
+        "storage",
+        "http://*/*",
+        "https://*/*"
+    ],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
